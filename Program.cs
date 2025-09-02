@@ -57,9 +57,9 @@ else if (resp == "2")
         int[] hours = Array.ConvertAll(parts[1].Split('|'), int.Parse);
         
         Console.WriteLine($"Week of {date:MMM, dd, yyyy}");
-        Console.WriteLine("{0,-3}{1,-3}{2,-3}{3,-3}{4,-3}{5,-3}{6,-3}{7,-4}{8,-4}", "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Tot", "Avg");
-        Console.WriteLine("{0,-3}{0,-3}{0,-3}{0,-3}{0,-3}{0,-3}{0,-3}{1,-4}{1,-4}", "--", "---");
-        Console.WriteLine("{0,-3}{1,-3}{2,-3}{3,-3}{4,-3}{5,-3}{6,-3}{7,-4}{8,-4}", hours[0], hours[1], hours[2], hours[3], hours[4], hours[5], hours[6], hours.Sum(), hours.Average().ToString("0.0"));
+        Console.WriteLine("{0,3}{1,3}{2,3}{3,3}{4,3}{5,3}{6,3}{7,4}{8,4}", "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Tot", "Avg");
+        Console.WriteLine("{0,3}{0,3}{0,3}{0,3}{0,3}{0,3}{0,3}{1,4}{1,4}", "--", "---");
+        Console.WriteLine("{0,3}{1,3}{2,3}{3,3}{4,3}{5,3}{6,3}{7,4}{8,4}", hours[0], hours[1], hours[2], hours[3], hours[4], hours[5], hours[6], hours.Sum(), hours.Average().ToString("0.0"));
         Console.WriteLine();
     }
     
