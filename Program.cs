@@ -9,6 +9,12 @@ string? resp = Console.ReadLine();
 if (resp == "1")
 {
     // Create data file
+    //ask how many weeks
+    Console.WriteLine("How many weeks of data do you want to enter?");
+    //input the response (convert to int)
+    int weeks = Convert.ToInt32(Console.ReadLine());
+
+    
 }
 else if (resp == "2")
 {
