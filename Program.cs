@@ -13,8 +13,13 @@ if (resp == "1")
     Console.WriteLine("How many weeks of data do you want to enter?");
     //input the response (convert to int)
     int weeks = Convert.ToInt32(Console.ReadLine());
+    //determine start and end date
+    DateTime today = DateTime.Now;
+    //we want full weeks sunday - saturday
+    DateTime dataEndDate = today.AddDays(-(int)today.DayOfWeek);
+    //subtract number of weeks from dataEndDate to get dataStartDate
+    DateTime dataStartDate = dataEndDate.AddDays(-((weeks * 7)));
 
-    
 }
 else if (resp == "2")
 {
