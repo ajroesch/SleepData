@@ -1,4 +1,6 @@
 ﻿//ask for input
+using System.Security;
+
 Console.WriteLine("Enter 1 to create data file.");
 Console.WriteLine("Enter 2 to parse data file.");
 Console.WriteLine("Enter anything else to quit.");
@@ -45,6 +47,17 @@ if (resp == "1")
 else if (resp == "2")
 {
     // Parse data file
+    //read data file
+    StreamReader sr = new("data.txt");
+    string? line;
+    while ((line = sr.ReadLine()) != null)
+    {
+        string[] parts = line.Split(',');
+        DateTime date = DateTime.Parse(parts[0]);
+        int[] hours = Array.ConvertAll(parts[1].Split('|'), int.Parse);
+    }
+
+    sr.Close();
 }
 
 
