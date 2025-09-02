@@ -23,6 +23,8 @@ if (resp == "1")
 
     Random rand = new();
 
+    StreamWriter sw = new("data.txt");
+
     while (dataDate < dataEndDate)
     {
         int[] hours = new int[7];
@@ -33,11 +35,12 @@ if (resp == "1")
 
         //write data to text file
         //M/d/yy,#|#|#|#|#|#|#
-        Console.WriteLine($"{dataDate:M/d/yy},{string.Join("|", hours)}");
+        sw.WriteLine($"{dataDate:M/d/yyyy},{string.Join("|", hours)}");
 
         dataDate = dataDate.AddDays(7);
     }
 
+    sw.Close();
 }
 else if (resp == "2")
 {
